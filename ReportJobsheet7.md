@@ -132,3 +132,14 @@ public class SiakadForAttendance07 {
 ```
 
 Result: 
+
+![result experiment1 question jobsheet7](result-experiment1-question-jobsheet7.png)
+
+Passing rule:
+* Score 60 or above = Pass.
+* Score below 60 = Fail.
+
+## 2.2 Experiment 2: Student Grades Case Study in SIAKAD – WHILE Loop
+
+### 2.2.1 Experimental Steps
+
