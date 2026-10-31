@@ -189,3 +189,4 @@ public class SiakadWhileAttendance07 {
 
 ### 2.2.2 Verification of Experimental Results
 
+![resut experiment2 jobsheet7](resutl-experiment2-jobsheet7.png)
