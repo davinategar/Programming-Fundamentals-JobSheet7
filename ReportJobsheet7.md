@@ -356,5 +356,22 @@ Because a DO-WHILE loop does not require initialization and update components li
 
 # 3. Assignment
 
-Flowchart:
+1. A cinema manager wants to create a program to calculate the total ticket sales in oneday. Tickets are sold at Rp 50,000 per ticket. The program must calculate the total numberof tickets sold and the total ticket sales revenue for the day, subject to the following rules:
+* If a customer buys more than 4 tickets, the customer receives a 10% discount.
+* If a customer buys more than 10 tickets, the customer receives a 15% discount.
+* If the ticket quantity entered is invalid (negative), the program ignores the input andasks for it to be re-entered.
+
+Answer:
+
+The code: 
+
+2. Refer to the following flowchart!
+
+![flowchart assignment jobsheet7](flowchart-assignment-jobsheet7.png)
+
+A parking lot operator wants to create a program to calculate the total parking fees ofseveral vehicles. The parking rate is Rp 3,000 per hour for cars and Rp 2,000 per hour formotorcycles. The program keeps asking for input as long as the input is not 0. Implementthe flowchart as a Java program!
+
+Answer:
+
+The code:
 
