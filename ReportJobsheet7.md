@@ -144,7 +144,6 @@ Passing rule:
 ### 2.2.1 Experimental Steps
 
 ```
-
 import java.util.Scanner;
 
 public class SiakadWhileAttendance07 {
@@ -226,7 +225,6 @@ Answer:
 The code:
 
 ```
-
 import java.util.Scanner;
 
 public class SiakadWhileAttendance07 {
@@ -277,4 +275,86 @@ Result:
 ## 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
 
 ### 2.3.1 Experimental Steps
+
+```
+import java.util.Scanner;
+
+public class CafeDoWhileAttendance07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int coffee, tea, bread, totalPrice;
+        String customerName;
+
+        int coffeePrice = 12000;
+        int teaPrice = 7000;
+        int breadPrice = 20000;
+
+        do {
+            System.out.print("Enter custommer name (type 'cancel' to exit): ");
+            customerName = sc.nextLine();
+
+            if (customerName.equalsIgnoreCase("cancel")) {
+                System.out.println("Transaction canceled.");
+                break;
+            }
+            System.out.print("Coffee quantity: ");
+            coffee = sc.nextInt();
+
+            System.out.print("Tea quantity: ");
+            tea = sc.nextInt();
+
+            System.out.print("Bread quantity: ");
+            bread =  sc.nextInt();
+
+            totalPrice = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice);
+
+            System.out.println("Total amount to pay: Rp " + totalPrice);
+
+            sc.nextLine();
+        } while (true);
+
+        System.out.println("All trasactions completed.");
+    }
+}
+```
+
+Result:
+
+![result experiment3 jobsheet7](result-experiment3-jobsheet7.png)
+
+### 2.3.3 Questions
+
+1. In this DO-WHILE loop, if the first customer name entered is “cancel”, how many times isthe loop executed?
+
+Answer:
+
+The loop is executed 1 time because a DO-WHILE loop always executes its body at least once before checking the condition. When the customer enters "cancel", the break statement immediately stops the loop.
+
+2. State the stopping condition used in this DO-WHILE loop!
+
+Answer: 
+
+The stopping condition is when the customer enters "cancel" as their name. The program checks this using:
+
+```
+if (customerName.equalsIgnoreCase("cancel")) {
+    System.out.println("Transaction canceled.");
+    break;
+}
+```
+
+The ```break``` statement stops the loop.
+
+3. What is the function of using the value true in the DO-WHILE condition?
+
+The value true makes the DO-WHILE loop run continuously because its condition is always true. The loop only stops when the break statement is executed. 
+
+4. Why does this DO-WHILE loop still run even though it has no initialization and updatecomponents?
+
+Because a DO-WHILE loop does not require initialization and update components like a FOR loop. It executes the code inside ```do``` first, then checks the condition in ```while```. Since the condition is ```true```, the loop keeps running until it encounters a ```break``` statement.
+
+# 3. Assignment
+
+Flowchart:
 
