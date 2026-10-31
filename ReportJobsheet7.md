@@ -272,3 +272,9 @@ public class SiakadWhileAttendance07 {
 
 Result: 
 
+![result experiment2 question jobsheet7](result-experiment2-question-jobsheet7.png)
+
+## 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
+
+### 2.3.1 Experimental Steps
+
