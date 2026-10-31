@@ -190,3 +190,85 @@ public class SiakadWhileAttendance07 {
 ### 2.2.2 Verification of Experimental Results
 
 ![resut experiment2 jobsheet7](resutl-experiment2-jobsheet7.png)
+
+### 2.2.3 Questions
+
+1. In the following code snippet, determine the meaning and purpose of the following syntax
+
+   ```
+   if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+   ```
+
+Answer:
+
+* ```score < 0 || score > 100``` This condition checks whether the score is less than 0 or greater than 100.
+* The ```continue``` statement skips the remaining code in the current loop and returns to the beginning of the                WHILE loop. It allows the student to enter their score again without increasing the value of ```i```.
+
+2. Why is the i++ statement written at the end of the WHILE loop? What happens if it iswritten at the beginning of the WHILE loop?
+
+Answer:
+
+The ```i++``` statement is written at the end of the WHILE loop to increase the student counter after a valid score has been entered and processed. If ```i++``` is written at the beginning, the counter will increase before the score is entered. This can cause the program to skip the first student or count incorrectly, especially when an invalid score is entered.
+
+3. If the number of students entered is 19, how many times will the WHILE loop run?
+
+Answer:
+
+The WHILE loop will run 19 times if all students enter valid scores. This is because the condition ```i < studentCount starts with``` ```i = 0``` and continues until ```i = 18.``` If a student enters an invalid score, the loop repeats for that student until a valid score is entered.
+
+4. Modify the program so that, if a student receives grade A, the program displays an additional message.
+
+Answer:
+
+The code:
+
+```
+
+import java.util.Scanner;
+
+public class SiakadWhileAttendance07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int studentCount, score, i = 0;
+
+        System.out.print("Enter the number of students: ");
+        studentCount = sc.nextInt();
+
+        while (i < studentCount) {
+            System.out.print("Enter score for student " + (i + 1) + ": ");
+            score = sc.nextInt();
+
+            if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+
+            if (score > 80) {
+                System.out.println("The grade of student " + (i + 1) + " is A");
+                System.out.println("Well done, keep up the good work!");
+            } else if (score > 73) {
+                System.out.println("The grade of student " + (i + 1) + " is B+");
+            } else if (score > 65) {
+                System.out.println("The grade of student " + (i + 1) + " is B");
+            } else if (score > 60) {
+                System.out.println("The grade of student " + (i + 1) + " is C+");
+            } else if (score > 50) {
+                System.out.println("The grade of student " + (i + 1) + " is C");
+            } else if (score > 39) {
+                System.out.println("The grade of student " + (i + 1) + " is D");
+            } else {
+                System.out.println("The grade of student " + (i + 1) + " is E");
+            }
+
+            i++;
+        }
+    }
+}
+```
+
+Result: 
+
