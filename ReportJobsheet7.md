@@ -144,7 +144,6 @@ Passing rule:
 ### 2.2.1 Experimental Steps
 
 ```
-
 import java.util.Scanner;
 
 public class SiakadWhileAttendance07 {
@@ -190,3 +189,172 @@ public class SiakadWhileAttendance07 {
 ### 2.2.2 Verification of Experimental Results
 
 ![resut experiment2 jobsheet7](resutl-experiment2-jobsheet7.png)
+
+### 2.2.3 Questions
+
+1. In the following code snippet, determine the meaning and purpose of the following syntax
+
+   ```
+   if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+   ```
+
+Answer:
+
+* ```score < 0 || score > 100``` This condition checks whether the score is less than 0 or greater than 100.
+* The ```continue``` statement skips the remaining code in the current loop and returns to the beginning of the                WHILE loop. It allows the student to enter their score again without increasing the value of ```i```.
+
+2. Why is the i++ statement written at the end of the WHILE loop? What happens if it iswritten at the beginning of the WHILE loop?
+
+Answer:
+
+The ```i++``` statement is written at the end of the WHILE loop to increase the student counter after a valid score has been entered and processed. If ```i++``` is written at the beginning, the counter will increase before the score is entered. This can cause the program to skip the first student or count incorrectly, especially when an invalid score is entered.
+
+3. If the number of students entered is 19, how many times will the WHILE loop run?
+
+Answer:
+
+The WHILE loop will run 19 times if all students enter valid scores. This is because the condition ```i < studentCount starts with``` ```i = 0``` and continues until ```i = 18.``` If a student enters an invalid score, the loop repeats for that student until a valid score is entered.
+
+4. Modify the program so that, if a student receives grade A, the program displays an additional message.
+
+Answer:
+
+The code:
+
+```
+import java.util.Scanner;
+
+public class SiakadWhileAttendance07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int studentCount, score, i = 0;
+
+        System.out.print("Enter the number of students: ");
+        studentCount = sc.nextInt();
+
+        while (i < studentCount) {
+            System.out.print("Enter score for student " + (i + 1) + ": ");
+            score = sc.nextInt();
+
+            if (score < 0 || score > 100) {
+                System.out.println("Invalid score. Please enter a valid score!");
+                continue;
+            }
+
+            if (score > 80) {
+                System.out.println("The grade of student " + (i + 1) + " is A");
+                System.out.println("Well done, keep up the good work!");
+            } else if (score > 73) {
+                System.out.println("The grade of student " + (i + 1) + " is B+");
+            } else if (score > 65) {
+                System.out.println("The grade of student " + (i + 1) + " is B");
+            } else if (score > 60) {
+                System.out.println("The grade of student " + (i + 1) + " is C+");
+            } else if (score > 50) {
+                System.out.println("The grade of student " + (i + 1) + " is C");
+            } else if (score > 39) {
+                System.out.println("The grade of student " + (i + 1) + " is D");
+            } else {
+                System.out.println("The grade of student " + (i + 1) + " is E");
+            }
+
+            i++;
+        }
+    }
+}
+```
+
+Result: 
+
+![result experiment2 question jobsheet7](result-experiment2-question-jobsheet7.png)
+
+## 2.3 Experiment 3: Café Transaction Case Study – DO-WHILE Loop
+
+### 2.3.1 Experimental Steps
+
+```
+import java.util.Scanner;
+
+public class CafeDoWhileAttendance07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int coffee, tea, bread, totalPrice;
+        String customerName;
+
+        int coffeePrice = 12000;
+        int teaPrice = 7000;
+        int breadPrice = 20000;
+
+        do {
+            System.out.print("Enter custommer name (type 'cancel' to exit): ");
+            customerName = sc.nextLine();
+
+            if (customerName.equalsIgnoreCase("cancel")) {
+                System.out.println("Transaction canceled.");
+                break;
+            }
+            System.out.print("Coffee quantity: ");
+            coffee = sc.nextInt();
+
+            System.out.print("Tea quantity: ");
+            tea = sc.nextInt();
+
+            System.out.print("Bread quantity: ");
+            bread =  sc.nextInt();
+
+            totalPrice = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice);
+
+            System.out.println("Total amount to pay: Rp " + totalPrice);
+
+            sc.nextLine();
+        } while (true);
+
+        System.out.println("All trasactions completed.");
+    }
+}
+```
+
+Result:
+
+![result experiment3 jobsheet7](result-experiment3-jobsheet7.png)
+
+### 2.3.3 Questions
+
+1. In this DO-WHILE loop, if the first customer name entered is “cancel”, how many times isthe loop executed?
+
+Answer:
+
+The loop is executed 1 time because a DO-WHILE loop always executes its body at least once before checking the condition. When the customer enters "cancel", the break statement immediately stops the loop.
+
+2. State the stopping condition used in this DO-WHILE loop!
+
+Answer: 
+
+The stopping condition is when the customer enters "cancel" as their name. The program checks this using:
+
+```
+if (customerName.equalsIgnoreCase("cancel")) {
+    System.out.println("Transaction canceled.");
+    break;
+}
+```
+
+The ```break``` statement stops the loop.
+
+3. What is the function of using the value true in the DO-WHILE condition?
+
+The value true makes the DO-WHILE loop run continuously because its condition is always true. The loop only stops when the break statement is executed. 
+
+4. Why does this DO-WHILE loop still run even though it has no initialization and updatecomponents?
+
+Because a DO-WHILE loop does not require initialization and update components like a FOR loop. It executes the code inside ```do``` first, then checks the condition in ```while```. Since the condition is ```true```, the loop keeps running until it encounters a ```break``` statement.
+
+# 3. Assignment
+
+Flowchart:
+
